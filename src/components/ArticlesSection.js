@@ -9,6 +9,11 @@ import cozywinterreading from "../assets/images/cozywinterreading.jpg";
 import domeImage from "../assets/images/dome.jpg";
 
 const ArticlesSection = () => {
+  /**
+   * As the component will be rerendered each time when parrent element renders you should 
+   * move this constant out of the component to prevent redeclaration
+   * @todo move out of the component body
+   */
   // Дані статей
   const articles = [
     { title: "Cozy Winter in a Dome", img: domeImage, alt: "Dome in winter with wooden deck chair" },
@@ -18,6 +23,10 @@ const ArticlesSection = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0); 
+  /**
+   * It's a static constants, they also should be moved out
+   * @todo move out of the component body
+   */
   // Визначаємо, скільки карток видно: 2
   const ARTICLES_PER_VIEW = 2;
   // Ширина однієї картки (w-80 = 320px) плюс інтервал (space-x-6 = 24px)
@@ -38,6 +47,10 @@ const ArticlesSection = () => {
   };
 
   return (
+    /**
+     * color #fdfbf7 should be in the tailwind theme
+     * @todo move to the tailwind config file
+     */
     <section className="bg-[#fdfbf7] py-20 px-6 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 relative">
         <div className="lg:w-1/3 max-w-md relative">
@@ -84,7 +97,9 @@ const ArticlesSection = () => {
                     alt={article.alt}
                     className="w-full h-full object-cover"
                   />
-                  
+                  {/**
+                    * @todo move color 6d7325 to tailwind config
+                    */}
                   <div className="absolute inset-x-0 bottom-0 bg-[#6d7325]/90 p-4 text-white text-center">
                     <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
                     <p className="flex items-center justify-center text-sm font-medium hover:text-amber-300 transition duration-300">
@@ -96,6 +111,10 @@ const ArticlesSection = () => {
             </div>
           </div>
 
+{/** 
+ * Both of these buttons should be a special components
+ * @todo move to special components
+ */}
           <button
             onClick={prevSlide}
             className="absolute -left-12 lg:-left-6 top-1/2 transform -translate-y-1/2 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center hover:bg-gray-100 transition z-20"

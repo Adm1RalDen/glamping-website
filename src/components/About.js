@@ -13,6 +13,10 @@ import aboutImage from '../assets/images/about.jpg'; // Постав своє з
 export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-50">
+      {/**
+       * Please make sure you use the same local all over the application (in case you don't have translations)
+       * @todo wrong locale
+       */}
       <img src="/images/tree.png" alt="Ялинка" className="mx-auto w-12 h-12 mb-8" />
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center">
         <div className="md:w-1/2">

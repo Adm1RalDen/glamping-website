@@ -6,6 +6,9 @@ import TENT from '../assets/images/TENT.jpg';
 import vodopad from '../assets/images/vodopad.jpg';
 
 export default function Services() {
+  /**
+   * @todo move out of the component body
+   */
   const services = [
     { img: service1, title: "Luxury Design", desc: "Each of our rooms is beautifully designed, combining eco materials and fine fabric." },
     { img: service3, title: "Adventure Packages", desc: "There's so much to do near our spot, from rafting to horse racing!" },

@@ -8,6 +8,10 @@ import facebookIcon from '../assets/images/facebookicon.png';
 
 const Footer = () => {
   
+  /**
+   * Should be located outside the component body
+   * @todo move out of the component body
+   */
   const socialLinks = [
     { 
       name: 'TWITTER', 
@@ -33,6 +37,10 @@ const Footer = () => {
   ];
 
   return (
+    /**
+     * All the color should be located in the tailwind config file (or styles if you are using tw4)
+     * @todo move color to the configuration file
+     */
     // Головний контейнер з темним фоном
     <footer className="bg-[#2c2b2a] text-gray-400 py-16 px-6 sm:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
@@ -54,6 +62,10 @@ const Footer = () => {
             {/* Текст та контакти - ОФОРМЛЕННЯ КРАСИВЕ та НЕ ЇСТЬ ОЧІ */}
             <p className="text-base text-gray-300 mb-4 max-w-xl leading-relaxed">
               We look forward to hearing from you and creating lasting memories of your
+              {/** 
+               * Avoid using {' '}, use &nbsp; instead
+               * @todo replace {' '}
+               */}
               vacation at the Hidden Heaven glamping. Write us on{' '}
               <a 
                 href="mailto:hidden.heaven@email.com" 
@@ -77,6 +89,10 @@ const Footer = () => {
           
           {/* Блок соціальних мереж (права частина) */}
           {/* ВИПРАВЛЕНО: Збільшено ширину до 1/2 і додано лівий відступ (ml-16) для центрування */}
+          {/** 
+           * wrong style **lg:ml-16**
+           * @todo update style
+           */}
           <div className="lg:w-1/2 flex flex-col space-y-8 mt-8 lg:mt-0 **lg:ml-16**">
             {socialLinks.map((link) => (
               <a 

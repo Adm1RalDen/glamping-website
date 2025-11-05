@@ -3,7 +3,9 @@ import reviewBackground from '../assets/images/backgroundSpikes.png';
 import buttonStartsLeft from '../assets/images/buttonstartsleft.png';
 import buttonStartsRight from '../assets/images/buttonstartsright.png';
 
-
+/**
+ * @todo move color to the config
+ */
 const ACCENT_COLOR_CLASS = 'text-[#8c8c4a]'; 
 const BUTTON_COLOR_CLASS = 'bg-amber-800'; 
 
@@ -14,6 +16,9 @@ export default function ReviewSectionNewSimple() {
     const [activeIndex, setActiveIndex] = useState(0); 
     const scrollRef = useRef(null);
 
+    /**
+     * move out of the component body
+     */
     const testimonials = [
         { text: "Hidden Heaven Glamping exceeded all our expectations. The tree house accommodation was like a fairytale!", name: "ERIC WARSTLER, CALIFORNIA", rating: 5 },
         { text: "We opted for a tent overlooking the tranquil lake, and it was the perfect setting for a peaceful retreat.", name: "JESSICA WILSON, TAMPA", rating: 5 },

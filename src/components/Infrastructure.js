@@ -12,11 +12,18 @@ const TREE_COLOR_CLASS = 'text-[#f98012]';
 const ACCENT_COLOR_CLASS = 'text-[#8c8c4a]';
 const ACCENT_BORDER_CLASS = 'border-[#8c8c4a]';
 const EMAIL_COLOR_CLASS = 'text-[#f98012]'; 
+/**
+ * unused variable
+ * @todo remove unused variable
+ */
 const BACKGROUND_TITLE_CLASS = 'absolute top-0 left-0 text-9xl md:text-[14rem] font-extrabold text-gray-100/70 select-none pointer-events-none tracking-widest leading-none';
 
 
 export default function InfrastructureSection() {
 
+    /**
+     * @todo move out of the component body
+     */
     const features = [
         {
             iconSrc: wifiIcon, 
