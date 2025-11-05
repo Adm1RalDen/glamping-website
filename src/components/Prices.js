@@ -2,7 +2,7 @@ import React from 'react';
 import aboutImage from '../assets/images/about.jpg';
 import TreeIconImage from '../assets/images/tree.png'; 
 
-const Prices = () => {
+const Prices = React.memo(() => {
   const priceList = [
     { name: 'Glamping Tent', lowSeason: '150', highSeason: '170' },
     { name: 'Small Wood Cabin', lowSeason: '190', highSeason: '220' },
@@ -24,6 +24,7 @@ const Prices = () => {
           src={tentImageUrl} 
           alt="Glamping Tent"
           className="rounded-lg shadow-xl object-cover w-full h-full max-h-[550px] lg:max-h-full"
+          loading="lazy"
         />
       </div>
 
@@ -81,6 +82,8 @@ const Prices = () => {
       </div>
     </section>
   );
-};
+});
+
+Prices.displayName = 'Prices';
 
 export default Prices;

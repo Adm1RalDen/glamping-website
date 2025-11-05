@@ -3,7 +3,7 @@ import React from 'react';
 export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-50">
-      <img src="/images/tree.png" alt="Ялинка" className="mx-auto w-12 h-12 mb-8" />
+      <img src="/images/tree.png" alt="Ялинка" className="mx-auto w-12 h-12 mb-8" loading="lazy" />
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-4">Welcome to Hidden Heaven</h2>

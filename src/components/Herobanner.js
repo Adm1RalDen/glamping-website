@@ -1,6 +1,7 @@
 import React from 'react';
 import bannerImage from '../assets/images/banner.jpg';
-const HeroBanner = () => {
+
+const HeroBanner = React.memo(() => {
   return (
    <section
   className="relative bg-cover bg-center h-[600px] flex items-center p-8 md:p-16 lg:p-24"
@@ -25,6 +26,8 @@ const HeroBanner = () => {
       </div>
     </section>
   );
-};
+});
+
+HeroBanner.displayName = 'HeroBanner';
 
 export default HeroBanner;

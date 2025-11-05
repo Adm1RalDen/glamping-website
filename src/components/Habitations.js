@@ -47,7 +47,7 @@ const AccommodationCard = ({ image, title, details, description, amenities }) =>
         <div className="bg-white flex flex-col h-full shadow-md rounded-lg overflow-hidden"> 
             
             <div className="overflow-hidden h-64"> 
-                <img src={image} alt={title} className="w-full h-full object-cover" />
+                <img src={image} alt={title} className="w-full h-full object-cover" loading="lazy" />
             </div>
             
             <div className="p-4 flex flex-col justify-between flex-grow">

@@ -84,6 +84,7 @@ const ArticlesSection = () => {
                     src={article.img}
                     alt={article.alt}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                   
                   <div className="absolute inset-x-0 bottom-0 bg-[#6d7325]/90 p-4 text-white text-center">

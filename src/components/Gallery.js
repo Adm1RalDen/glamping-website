@@ -25,7 +25,8 @@ export default function Gallery() {
               <img
                 src={img}
                 alt={`Gallery ${i + 1}`}
-                className="w-full h-full object-cover "
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           ))}

@@ -21,7 +21,7 @@ export default function Services() {
               key={i}
               className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300"
             >
-              <img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+              <img src={s.img} alt={s.title} className="w-full h-48 object-cover" loading="lazy" />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{s.title}</h3>
                 <p className="text-gray-700">{s.desc}</p>
@@ -36,6 +36,7 @@ export default function Services() {
       src={TENT}
       alt="Camping setup"
       className="w-full h-full object-cover"
+      loading="lazy"
     />
   </div>
 
@@ -61,6 +62,7 @@ export default function Services() {
     src={vodopad}
     alt="Водопад"
     className="w-full h-auto rounded-xl"
+    loading="lazy"
   />
   <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
     <span className="text-5xl md:text-7xl font-bold mb-2">Explore.</span>
