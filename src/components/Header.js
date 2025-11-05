@@ -3,10 +3,10 @@ import { Link } from 'react-scroll';
 
 export default function Header() {
   return (
-    <header className="fixed w-full top-0 left-0 bg-white shadow z-50">
+    <header className="fixed w-full top-0 left-0 bg-white shadow z-50" role="banner">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
-        <div className="text-2xl font-bold text-green-600">Glamping</div>
-        <nav>
+        <div className="text-2xl font-bold text-green-600" role="heading" aria-level="1">Glamping</div>
+        <nav role="navigation" aria-label="Main navigation">
           <ul className="flex space-x-6">
             <li>
               <Link
@@ -60,7 +60,10 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+        <button 
+          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
+          aria-label="Бронювати розміщення"
+        >
           Бронювати
         </button>
       </div>

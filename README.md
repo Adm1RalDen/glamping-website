@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# Hidden Heaven Glamping Website
+
+A modern, responsive glamping website built with React and Tailwind CSS, showcasing luxury outdoor accommodations in Washington state.
+
+## Features
+
+- 🏕️ **Accommodation Showcase**: Display various glamping options including geodesic domes, wood cabins, and safari tents
+- 📸 **Photo Gallery**: Interactive gallery with lazy loading for optimal performance
+- 💬 **Testimonials**: Customer reviews with carousel functionality
+- 📱 **Fully Responsive**: Optimized for all device sizes
+- ♿ **Accessible**: WCAG compliant with proper ARIA labels and semantic HTML
+- ⚡ **Performance Optimized**: React.memo, lazy loading, and optimized bundle size
+
+## Tech Stack
+
+- React 19.2
+- Tailwind CSS
+- React Scroll for smooth navigation
+- React Testing Library for testing
+
+## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

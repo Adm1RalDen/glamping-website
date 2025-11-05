@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import domeImage from '../assets/images/dome.jpg'; 
 import cabinImage from '../assets/images/cabin.jpg';
 import treeIcon from '../assets/images/tree.png'; 
@@ -46,7 +47,7 @@ const AccommodationCard = ({ image, title, details, description, amenities }) =>
         <div className="bg-white flex flex-col h-full shadow-md rounded-lg overflow-hidden"> 
             
             <div className="overflow-hidden h-64"> 
-                <img src={image} alt={title} className="w-full h-full object-cover" />
+                <img src={image} alt={title} className="w-full h-full object-cover" loading="lazy" />
             </div>
             
             <div className="p-4 flex flex-col justify-between flex-grow">
@@ -69,13 +70,29 @@ const AccommodationCard = ({ image, title, details, description, amenities }) =>
                     <p className="text-gray-600 mb-6 leading-relaxed min-h-[4rem]">{description}</p>
                 </div>
                 
-                <button className="bg-amber-700 text-white text-sm font-bold tracking-wider py-3 px-6 uppercase hover:bg-amber-800 transition duration-300 shadow-md self-start">
+                <button 
+                    className="bg-amber-700 text-white text-sm font-bold tracking-wider py-3 px-6 uppercase hover:bg-amber-800 transition duration-300 shadow-md self-start"
+                    aria-label={`Book ${title} accommodation`}
+                >
                     BOOK NOW
                 </button>
             </div>
         </div>
     </div>
 );
+
+AccommodationCard.propTypes = {
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    details: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    amenities: PropTypes.arrayOf(
+        PropTypes.shape({
+            icon: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};
 
 const HabitationsHeader = () => (
     <div className="max-w-6xl mx-auto py-12 px-4 md:px-6 flex flex-wrap">
@@ -99,7 +116,10 @@ const HabitationsHeader = () => (
             <p className={`text-base mb-6 text-gray-600 leading-relaxed`}>
                 Immerse yourself in the tranquility of nature with our geodesic domes, providing a unique and futuristic lodging experience under the open sky. For those seeking rustic charm, our wood cabins offer cozy comfort amidst the lush forest surroundings, complete with modern amenities for a relaxing stay.
             </p>
-            <button className={`text-sm font-bold uppercase ${PRIMARY_COLOR} tracking-wider hover:text-amber-800 transition duration-300`}>
+            <button 
+                className={`text-sm font-bold uppercase ${PRIMARY_COLOR} tracking-wider hover:text-amber-800 transition duration-300`}
+                aria-label="See all accommodation options"
+            >
                 SEE ALL →
             </button>
         </div>

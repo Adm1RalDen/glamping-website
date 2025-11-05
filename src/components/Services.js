@@ -36,6 +36,7 @@ export default function Services() {
       src={TENT}
       alt="Camping setup"
       className="w-full h-full object-cover"
+      loading="lazy"
     />
   </div>
 
@@ -47,7 +48,10 @@ export default function Services() {
       <p className="text-gray-800 mb-6">
         Whether you're seeking a romantic getaway, a family adventure, or a solo escape, Hidden Heaven promises an unforgettable stay for every visitor. From cozy tents to charming cabins, our accommodations are thoughtfully designed to provide a tranquil haven amidst the breathtaking wilderness.
       </p>
-      <button className="bg-green-600 text-white px-6 py-3 text-lg hover:bg-green-700 transition duration-300">
+      <button 
+        className="bg-green-600 text-white px-6 py-3 text-lg hover:bg-green-700 transition duration-300"
+        aria-label="Book your nature experience now"
+      >
         BOOK NOW
       </button>
     </div>
@@ -58,6 +62,7 @@ export default function Services() {
     src={vodopad}
     alt="Водопад"
     className="w-full h-auto rounded-xl"
+    loading="lazy"
   />
   <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
     <span className="text-5xl md:text-7xl font-bold mb-2">Explore.</span>

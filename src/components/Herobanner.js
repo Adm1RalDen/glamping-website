@@ -1,6 +1,7 @@
 import React from 'react';
 import bannerImage from '../assets/images/banner.jpg';
-const HeroBanner = () => {
+
+const HeroBanner = React.memo(() => {
   return (
    <section
   className="relative bg-cover bg-center h-[600px] flex items-center p-8 md:p-16 lg:p-24"
@@ -16,12 +17,17 @@ const HeroBanner = () => {
           Ignite Your Passion: Campfire Dreams
         </h1>
         
-        <button className="bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 shadow-md">
+        <button 
+          className="bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 shadow-md"
+          aria-label="Learn more about campfire dreams"
+        >
           LEARN MORE
         </button>
       </div>
     </section>
   );
-};
+});
+
+HeroBanner.displayName = 'HeroBanner';
 
 export default HeroBanner;

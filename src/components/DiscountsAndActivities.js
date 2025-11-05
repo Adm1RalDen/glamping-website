@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import bike from '../assets/images/bikeicon.png';
 import boat from '../assets/images/boaticon.png'; 
 import rod from '../assets/images/fishingrod.png';
@@ -19,6 +20,11 @@ const ActivityItem = ({ icon, title, description }) => (
     </div>
 );
 
+ActivityItem.propTypes = {
+    icon: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+};
 
 const DiscountsAndActivities = () => {
 
@@ -41,7 +47,10 @@ const DiscountsAndActivities = () => {
                     <p className="text-lg text-gray-600 mt-4 mb-8">
                         Book your getaway for 3+ days and contact our managers to get the discount.
                     </p>
-                    <button className="text-sm font-bold uppercase text-amber-700 tracking-wider py-3 px-6 border border-amber-700 hover:bg-amber-50 transition duration-300">
+                    <button 
+                        className="text-sm font-bold uppercase text-amber-700 tracking-wider py-3 px-6 border border-amber-700 hover:bg-amber-50 transition duration-300"
+                        aria-label="Book honeymoon package with 15% discount"
+                    >
                         Book Now
                     </button>
                 </div>

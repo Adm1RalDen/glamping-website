@@ -17,11 +17,13 @@ const ArticlesSection = () => {
     { title: "Cozy Winter Reading", img: cozywinterreading, alt: "Book and coffee on a cozy winter day" },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0); 
-  // Визначаємо, скільки карток видно: 2
+  // Configuration constants
   const ARTICLES_PER_VIEW = 2;
-  // Ширина однієї картки (w-80 = 320px) плюс інтервал (space-x-6 = 24px)
-  const CARD_WIDTH_PLUS_GAP = 320 + 24; 
+  const CARD_WIDTH = 320; // w-80 in Tailwind
+  const CARD_GAP = 24; // space-x-6 in Tailwind
+  const CARD_WIDTH_PLUS_GAP = CARD_WIDTH + CARD_GAP;
+
+  const [currentIndex, setCurrentIndex] = useState(0); 
 
   const prevSlide = () => {
     // Якщо поточний індекс 0, переходимо до кінця, щоб останні дві картки були видимі
@@ -58,12 +60,11 @@ const ArticlesSection = () => {
               Stay informed and engaged with the latest updates and inspiring
               articles.
             </p>
-            <a 
-              href="#"
+            <button
               className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 shadow-lg"
             >
               MORE ARTICLES
-            </a>
+            </button>
           </div>
         </div>
         <div className="lg:w-2/3 relative flex items-center w-full max-w-2xl">
@@ -83,6 +84,7 @@ const ArticlesSection = () => {
                     src={article.img}
                     alt={article.alt}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                   
                   <div className="absolute inset-x-0 bottom-0 bg-[#6d7325]/90 p-4 text-white text-center">
