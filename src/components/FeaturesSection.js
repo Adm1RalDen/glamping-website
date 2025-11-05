@@ -5,6 +5,10 @@ import foodicon from '../assets/images/foodicon.png';
 import pointericon from '../assets/images/pointericon.png';
 
 const CampingExperienceBlock = () => {
+  /**
+   * Why do you need alt text stored in this variable?
+   * @refactor @todo remove redundant constant
+   */
   const altText = "Пара відпочиває в глемпінгу";
 
   return (
@@ -33,6 +37,10 @@ const CampingExperienceBlock = () => {
 
         <div className="flex flex-wrap gap-x-6 gap-y-3 mb-8 text-sm">
           <img src={tentIcon} alt="Tent" className="w-5 h-5 "/>
+          {/** 
+           * Should also be an array
+           * @refactor @todo move to array and map here
+           */}
           <span className="flex items-center text-amber-900 font-semibold">
              Luxury accommodation
           </span>
@@ -56,6 +64,11 @@ const CampingExperienceBlock = () => {
           Whether you're embarking on a romantic retreat, a family adventure, or a solo sojourn, Hidden Heaven offers an idyllic escape where cherished memories are made and cherished.
         </p>
 
+        {/** 
+         * It looks like you have several buttons which have the same styles as this one. Create a button component to have isolated 
+         * implementation and reuse it here
+         * @refactor @todo create a button component
+         */}
         <button 
           className="bg-amber-800 hover:bg-amber-900 text-white font-bold py-3 px-6 uppercase tracking-wider transition duration-300"
         >

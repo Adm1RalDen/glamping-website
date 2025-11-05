@@ -124,6 +124,9 @@ const Habitations = () => {
                 <div className="max-w-6xl mx-auto pb-12 px-4 md:px-6 flex flex-wrap  items-stretch">
                     {ACCOMMODATIONS_DATA.map((acc, index) => (
                         <AccommodationCard 
+                        /**
+                         * It's not good to have keys as indexes of array. If the array length will be changed render issue may happen
+                         */
                             key={index}
                             {...acc}
                         />

@@ -3,6 +3,9 @@ import aboutImage from '../assets/images/about.jpg';
 import TreeIconImage from '../assets/images/tree.png'; 
 
 const Prices = () => {
+  /**
+   * @todo move out of the component body
+   */
   const priceList = [
     { name: 'Glamping Tent', lowSeason: '150', highSeason: '170' },
     { name: 'Small Wood Cabin', lowSeason: '190', highSeason: '220' },
@@ -14,6 +17,9 @@ const Prices = () => {
     { name: 'Kids and Infants', lowSeason: '50', highSeason: '60' },
   ];
   
+  /**
+   * @todo redundant constant
+   */
   const tentImageUrl = aboutImage;
 
   return (

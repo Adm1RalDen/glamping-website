@@ -1,9 +1,22 @@
 import React from 'react';
 import aboutImage from '../assets/images/about.jpg'; // Постав своє зображення
 
+// Would be great to add code forammer. So the code will be in the same format in every file.
+
+// const aboutStats = [
+//   { imgSrc: '/images/tent.png', altText: "Тент", description: "5 Vintage Retro Tents" },
+//   { imgSrc: '/images/tent3.png', altText: "Тент2", description: "10 wood cabins" },
+//   { imgSrc: '/images/tent2.png', altText: "Тент3", description: "3 Safari Tents" },
+//   { imgSrc: '/images/tent4.png', altText: "Тент4", description: "2 Tree Houses" },
+// ];
+
 export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-50">
+      {/**
+       * Please make sure you use the same local all over the application (in case you don't have translations)
+       * @todo wrong locale
+       */}
       <img src="/images/tree.png" alt="Ялинка" className="mx-auto w-12 h-12 mb-8" />
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center">
         <div className="md:w-1/2">
@@ -14,6 +27,12 @@ export default function About() {
         </div>
       </div>
 <div className="flex justify-center items-center gap-40 mt-16 px-4">
+  {/* When we have lements which are repeating it's better to use map function. So the code will be like this:
+  {aboutStats.map(({imgSrc, altText, description}, index) => (
+    <div key={index} className="flex flex-col items-center">
+      <img src={imgSrc} alt={altText} className="w-16 h-16" />
+      <p className="text-gray-700 font-semibold text-center">{description}</p>
+  </div>))} */}
   <div className="flex flex-col items-center">
     <img src="/images/tent.png" alt="Тент" className="w-16 h-16" />
     <p className="text-gray-700 font-semibold text-center">5 Vintage Retro Tents</p>

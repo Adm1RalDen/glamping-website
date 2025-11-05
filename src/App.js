@@ -16,6 +16,8 @@ import ArticlesSection from './components/ArticlesSection';
 
 function App() {
   return (
+    // Usually you want to have a layout over the whole site. May be it's a good place for it?
+    // @todo check if you need layout here
     <>
       <Header />
       <Hero />

@@ -7,6 +7,10 @@ import gallery5 from "../assets/images/gallery5.jpg";
 import gallery6 from "../assets/images/gallery6.jpg";
 
 export default function Gallery() {
+  /**
+   * Should be out of the component
+   * @todo move out of the component
+   */
   const images = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
 
   return (
@@ -17,6 +21,9 @@ export default function Gallery() {
         >
           {images.map((img, i) => (
             <div
+              /**
+               * It's not good to have keys as indexes of array. If the array length will be changed render issue may happen
+               */
               key={i}
               className="flex-shrink-0 w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 overflow-hidden transform transition duration-300"
             >

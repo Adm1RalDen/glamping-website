@@ -1,11 +1,18 @@
 import React from 'react';
+/**
+ * Please create more descriptive namings
+ * @todo rename to better understand what file is this
+ */
 import bike from '../assets/images/bikeicon.png';
 import boat from '../assets/images/boaticon.png'; 
 import rod from '../assets/images/fishingrod.png';
 import grill from '../assets/images/Grill.png';
 import honey from '../assets/images/backgroundhoney.png'; 
 
-
+/**
+ * It's better to have each component located inside it's own file
+ * @refactor @todo move to the separate file
+ */
 const ActivityItem = ({ icon, title, description }) => (
     <div className="flex gap-4 md:gap-6 lg:w-1/2 p-2">
         <div className="flex-shrink-0 w-16 h-16 text-amber-800">
@@ -49,7 +56,10 @@ const DiscountsAndActivities = () => {
             
             <div className="max-w-6xl mx-auto py-12 px-4 md:px-6">
                 <div className="flex flex-wrap"> 
-                    
+                    {/** 
+                     * Move the information into a constant out of the component body and use map here
+                     * @refactor @todo map items
+                     */}
                     <ActivityItem 
                         icon={bike} 
                         title="Mountain Biking"
