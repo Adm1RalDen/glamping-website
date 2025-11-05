@@ -17,11 +17,13 @@ const ArticlesSection = () => {
     { title: "Cozy Winter Reading", img: cozywinterreading, alt: "Book and coffee on a cozy winter day" },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0); 
-  // Визначаємо, скільки карток видно: 2
+  // Configuration constants
   const ARTICLES_PER_VIEW = 2;
-  // Ширина однієї картки (w-80 = 320px) плюс інтервал (space-x-6 = 24px)
-  const CARD_WIDTH_PLUS_GAP = 320 + 24; 
+  const CARD_WIDTH = 320; // w-80 in Tailwind
+  const CARD_GAP = 24; // space-x-6 in Tailwind
+  const CARD_WIDTH_PLUS_GAP = CARD_WIDTH + CARD_GAP;
+
+  const [currentIndex, setCurrentIndex] = useState(0); 
 
   const prevSlide = () => {
     // Якщо поточний індекс 0, переходимо до кінця, щоб останні дві картки були видимі

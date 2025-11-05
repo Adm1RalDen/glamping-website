@@ -14,6 +14,10 @@ export default function ReviewSectionNewSimple() {
     const [activeIndex, setActiveIndex] = useState(0); 
     const scrollRef = useRef(null);
 
+    // Configuration constants
+    const SLIDE_WIDTH = 384; // w-96 in Tailwind
+    const SLIDE_GAP = 32; // space-x-8 in Tailwind
+
     const testimonials = [
         { text: "Hidden Heaven Glamping exceeded all our expectations. The tree house accommodation was like a fairytale!", name: "ERIC WARSTLER, CALIFORNIA", rating: 5 },
         { text: "We opted for a tent overlooking the tranquil lake, and it was the perfect setting for a peaceful retreat.", name: "JESSICA WILSON, TAMPA", rating: 5 },
@@ -27,8 +31,7 @@ export default function ReviewSectionNewSimple() {
 
     const scrollToSlide = (index) => {
         if (scrollRef.current) {
-            const slideWidth = 384 + 32; 
-            const scrollPosition = index * slideWidth; 
+            const scrollPosition = index * (SLIDE_WIDTH + SLIDE_GAP); 
             
             scrollRef.current.scrollTo({
                 left: scrollPosition,

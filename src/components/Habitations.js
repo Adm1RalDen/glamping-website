@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import domeImage from '../assets/images/dome.jpg'; 
 import cabinImage from '../assets/images/cabin.jpg';
 import treeIcon from '../assets/images/tree.png'; 
@@ -79,6 +80,19 @@ const AccommodationCard = ({ image, title, details, description, amenities }) =>
         </div>
     </div>
 );
+
+AccommodationCard.propTypes = {
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    details: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    amenities: PropTypes.arrayOf(
+        PropTypes.shape({
+            icon: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};
 
 const HabitationsHeader = () => (
     <div className="max-w-6xl mx-auto py-12 px-4 md:px-6 flex flex-wrap">

@@ -10,15 +10,17 @@ export default function Gallery() {
   const images = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
 
   return (
-    <section id="gallery" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 ">
+    <section id="gallery" className="py-20 bg-white" aria-label="Photo Gallery">
+      <div className="max-w-7xl mx-auto px-4">
         <div
           className="flex flex-wrap justify-center gap-4"
+          role="list"
         >
           {images.map((img, i) => (
             <div
               key={i}
               className="flex-shrink-0 w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 overflow-hidden transform transition duration-300"
+              role="listitem"
             >
               <img
                 src={img}
