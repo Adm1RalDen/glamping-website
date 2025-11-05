@@ -21,7 +21,7 @@ export default function Services() {
               key={i}
               className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300"
             >
-              <img src={s.img} alt={s.title} className="w-full h-48 object-cover" loading="lazy" />
+              <img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{s.title}</h3>
                 <p className="text-gray-700">{s.desc}</p>

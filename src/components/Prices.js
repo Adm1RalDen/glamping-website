@@ -24,7 +24,6 @@ const Prices = React.memo(() => {
           src={tentImageUrl} 
           alt="Glamping Tent"
           className="rounded-lg shadow-xl object-cover w-full h-full max-h-[550px] lg:max-h-full"
-          loading="lazy"
         />
       </div>
 
