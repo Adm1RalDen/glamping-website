@@ -11,8 +11,7 @@ import aidMedIcon from '../assets/images/aidmedicon.png';
 const TREE_COLOR_CLASS = 'text-[#f98012]'; 
 const ACCENT_COLOR_CLASS = 'text-[#8c8c4a]';
 const ACCENT_BORDER_CLASS = 'border-[#8c8c4a]';
-const EMAIL_COLOR_CLASS = 'text-[#f98012]'; 
-const BACKGROUND_TITLE_CLASS = 'absolute top-0 left-0 text-9xl md:text-[14rem] font-extrabold text-gray-100/70 select-none pointer-events-none tracking-widest leading-none';
+const EMAIL_COLOR_CLASS = 'text-[#f98012]';
 
 
 export default function InfrastructureSection() {

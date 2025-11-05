@@ -69,7 +69,10 @@ const AccommodationCard = ({ image, title, details, description, amenities }) =>
                     <p className="text-gray-600 mb-6 leading-relaxed min-h-[4rem]">{description}</p>
                 </div>
                 
-                <button className="bg-amber-700 text-white text-sm font-bold tracking-wider py-3 px-6 uppercase hover:bg-amber-800 transition duration-300 shadow-md self-start">
+                <button 
+                    className="bg-amber-700 text-white text-sm font-bold tracking-wider py-3 px-6 uppercase hover:bg-amber-800 transition duration-300 shadow-md self-start"
+                    aria-label={`Book ${title} accommodation`}
+                >
                     BOOK NOW
                 </button>
             </div>
@@ -99,7 +102,10 @@ const HabitationsHeader = () => (
             <p className={`text-base mb-6 text-gray-600 leading-relaxed`}>
                 Immerse yourself in the tranquility of nature with our geodesic domes, providing a unique and futuristic lodging experience under the open sky. For those seeking rustic charm, our wood cabins offer cozy comfort amidst the lush forest surroundings, complete with modern amenities for a relaxing stay.
             </p>
-            <button className={`text-sm font-bold uppercase ${PRIMARY_COLOR} tracking-wider hover:text-amber-800 transition duration-300`}>
+            <button 
+                className={`text-sm font-bold uppercase ${PRIMARY_COLOR} tracking-wider hover:text-amber-800 transition duration-300`}
+                aria-label="See all accommodation options"
+            >
                 SEE ALL →
             </button>
         </div>

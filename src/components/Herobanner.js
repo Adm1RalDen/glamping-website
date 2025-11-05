@@ -16,7 +16,10 @@ const HeroBanner = () => {
           Ignite Your Passion: Campfire Dreams
         </h1>
         
-        <button className="bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 shadow-md">
+        <button 
+          className="bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-md transition duration-300 shadow-md"
+          aria-label="Learn more about campfire dreams"
+        >
           LEARN MORE
         </button>
       </div>

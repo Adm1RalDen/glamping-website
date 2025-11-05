@@ -7,10 +7,36 @@ export default function Contact() {
         <h2 className="text-3xl font-bold text-center mb-12">Контакти</h2>
         <div className="flex flex-col md:flex-row gap-10">
           <form className="flex-1 bg-white shadow-lg rounded-lg p-6 space-y-4">
-            <input type="text" placeholder="Ім'я" className="w-full p-3 border rounded"/>
-            <input type="email" placeholder="Email" className="w-full p-3 border rounded"/>
-            <textarea placeholder="Повідомлення" className="w-full p-3 border rounded h-32"></textarea>
-            <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded">Надіслати</button>
+            <label htmlFor="contact-name" className="sr-only">Ім'я</label>
+            <input 
+              id="contact-name"
+              type="text" 
+              placeholder="Ім'я" 
+              className="w-full p-3 border rounded"
+              required
+            />
+            <label htmlFor="contact-email" className="sr-only">Email</label>
+            <input 
+              id="contact-email"
+              type="email" 
+              placeholder="Email" 
+              className="w-full p-3 border rounded"
+              required
+            />
+            <label htmlFor="contact-message" className="sr-only">Повідомлення</label>
+            <textarea 
+              id="contact-message"
+              placeholder="Повідомлення" 
+              className="w-full p-3 border rounded h-32"
+              required
+            ></textarea>
+            <button 
+              type="submit"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded"
+              aria-label="Надіслати форму контакту"
+            >
+              Надіслати
+            </button>
           </form>
           <div className="flex-1 space-y-4 text-gray-700">
             <p><strong>Адреса:</strong> Карпати, Україна</p>

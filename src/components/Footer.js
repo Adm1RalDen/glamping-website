@@ -77,7 +77,7 @@ const Footer = () => {
           
           {/* Блок соціальних мереж (права частина) */}
           {/* ВИПРАВЛЕНО: Збільшено ширину до 1/2 і додано лівий відступ (ml-16) для центрування */}
-          <div className="lg:w-1/2 flex flex-col space-y-8 mt-8 lg:mt-0 **lg:ml-16**">
+          <div className="lg:w-1/2 flex flex-col space-y-8 mt-8 lg:mt-0 lg:ml-16">
             {socialLinks.map((link) => (
               <a 
                 key={link.name} 

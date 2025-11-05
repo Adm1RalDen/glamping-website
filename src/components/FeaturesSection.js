@@ -58,6 +58,7 @@ const CampingExperienceBlock = () => {
 
         <button 
           className="bg-amber-800 hover:bg-amber-900 text-white font-bold py-3 px-6 uppercase tracking-wider transition duration-300"
+          aria-label="Learn more about our glamping site"
         >
           MORE ABOUT US
         </button>

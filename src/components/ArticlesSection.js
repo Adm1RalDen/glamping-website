@@ -58,12 +58,11 @@ const ArticlesSection = () => {
               Stay informed and engaged with the latest updates and inspiring
               articles.
             </p>
-            <a 
-              href="#"
+            <button
               className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 shadow-lg"
             >
               MORE ARTICLES
-            </a>
+            </button>
           </div>
         </div>
         <div className="lg:w-2/3 relative flex items-center w-full max-w-2xl">

@@ -41,7 +41,10 @@ const DiscountsAndActivities = () => {
                     <p className="text-lg text-gray-600 mt-4 mb-8">
                         Book your getaway for 3+ days and contact our managers to get the discount.
                     </p>
-                    <button className="text-sm font-bold uppercase text-amber-700 tracking-wider py-3 px-6 border border-amber-700 hover:bg-amber-50 transition duration-300">
+                    <button 
+                        className="text-sm font-bold uppercase text-amber-700 tracking-wider py-3 px-6 border border-amber-700 hover:bg-amber-50 transition duration-300"
+                        aria-label="Book honeymoon package with 15% discount"
+                    >
                         Book Now
                     </button>
                 </div>

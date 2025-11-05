@@ -14,10 +14,16 @@ export default function Hero() {
         <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fadeInDown whitespace-normal">
           HIDDEN HEAVEN GLAMPING
         </h1>
-        <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded animate-fadeIn">
+        <button 
+          className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded animate-fadeIn"
+          aria-label="Book your glamping experience now"
+        >
           Book Now
         </button>
-        <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded animate-fadeIn mt-4">
+        <button 
+          className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded animate-fadeIn mt-4"
+          aria-label="Call us for more information"
+        >
           Call us
         </button>
       </div>
